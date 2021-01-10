@@ -6,7 +6,11 @@ let formulaire = document.querySelector('#formulaire') ;
 // Etape 2 - Cacher l'erreur
 error.style.visibility = "hidden";
 //error.style.display = "none";
-// Etape 3 - Générer un nombre aléatoire
+
+// Etape 3 - Générer un nombre aléatoire entre 0 et 1000
+let nombreAleatoire = Math.floor(Math.random() * 1001) ;
+//Math.random --> nbre entre 0 et 1
+//Math.floor --> avoir uniquement des nbres entiers
 
 // Etape 4 - Vérifier que l'utilisateur donne bien un nombre
 
