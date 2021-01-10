@@ -2,8 +2,10 @@
 let input = document.querySelector('#prix') ;
 let error = document.querySelector('small') ;
 let formulaire = document.querySelector('#formulaire') ;
-// Etape 2 - Cacher l'erreur
 
+// Etape 2 - Cacher l'erreur
+error.style.visibility = "hidden";
+//error.style.display = "none";
 // Etape 3 - Générer un nombre aléatoire
 
 // Etape 4 - Vérifier que l'utilisateur donne bien un nombre
