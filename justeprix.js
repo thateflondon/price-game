@@ -43,3 +43,31 @@ formulaire.addEventListener('submit', (e) => {
 });
 
 // Etape 6 - Créer la fonction vérifier
+function verifier(nombre) {
+
+    let instruction = document.createElement('div');
+
+    if (nombre < nombreAleatoire) {
+        //Plus
+        //ajouter un contenu "#1 (4) c'est plus !"
+        instruction.textContent = "Tentative n°" + coups + " " + "(" + nombre + ")" + " " + "C'est plus !";
+        //ajouter les classes instruction et plus
+        instruction.className = "instruction plus";
+    } else if (nombre > nombreAleatoire) {
+        //Moins
+        //ajouter un contenu "#1 (4) c'est moins !"
+        instruction.textContent = "Tentative n°" + coups + " " + "(" + nombre + ")" + " " + "C'est moins !";
+        //ajouter les classes instruction et moins
+        instruction.className = "instruction moins";
+    } else {
+        //Gagné
+        //ajouter un contenu "#1 (4) félicitations vous avez trouvé le juste prix !"
+        instruction.textContent = "Tentative n°" + coups + " " + "(" + nombre + ")" + " " + "félicitations vous avez trouvé le juste prix !";
+        //ajouter les classes instruction et fini
+        instruction.className = "instruction fini";
+    }
+
+    //Ajouter l'élément devant(par défaut il est en arrière plan et on ne le voit pas.. logique hein !?)
+    document.querySelector('#instructions').prepend(instruction);
+
+}
