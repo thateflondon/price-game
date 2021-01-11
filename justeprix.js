@@ -16,12 +16,23 @@ let nombreAleatoire = Math.floor(Math.random() * 1001) ;
 input.addEventListener('keyup', () => {
     if(isNaN(input.value)){
         //affiche le message d'erreur
-        error.style.display = 'block';
+        error.style.display = "block";
     }else{
         //ne pas afficher message d'erreur
         error.style.display = "none";
     }
-})
-// Etape 5 - Agir à l'envoi du formulaire
+});
 
+// Etape 5 - Agir à l'envoi du formulaire
+formulaire.addEventListener('submit', (e) => {
+    e.preventDefault();//on annule l'évènement par défaut du boutton
+
+    if (isNaN(input.value) || input.value == '') {
+        // mettre bordure formualaire en rouge
+        input.style.borderColor = 'red';
+    } else {
+        // mettre bordure formualaire en gris
+        input.style.borderColor = 'green';
+    }
+});
 // Etape 6 - Créer la fonction vérifier
