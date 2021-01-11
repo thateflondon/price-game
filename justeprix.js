@@ -11,6 +11,8 @@ error.style.display = "none";
 let nombreAleatoire = Math.floor(Math.random() * 1001) ;
 //Math.random --> nbre entre 0 et 1
 //Math.floor --> avoir uniquement des nbres entiers
+let coups = 0;
+let nombreChoisi;
 
 // Etape 4 - Vérifier que l'utilisateur donne bien un nombre
 input.addEventListener('keyup', () => {
@@ -31,8 +33,13 @@ formulaire.addEventListener('submit', (e) => {
         // mettre bordure formualaire en rouge
         input.style.borderColor = 'red';
     } else {
+        coups++;
         // mettre bordure formualaire en gris
         input.style.borderColor = 'green';
+        nombreChoisi = input.value;
+        input.value = '';
+        verifier(nombreChoisi);
     }
 });
+
 // Etape 6 - Créer la fonction vérifier
