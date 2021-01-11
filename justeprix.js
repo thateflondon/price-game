@@ -65,6 +65,8 @@ function verifier(nombre) {
         instruction.textContent = "Tentative n°" + coups + " " + "(" + nombre + ")" + " " + "félicitations vous avez trouvé le juste prix !";
         //ajouter les classes instruction et fini
         instruction.className = "instruction fini";
+        //empêcher le joueur de continuer après avoir trouvé le bon chiffre 
+        input.disabled = true;
     }
 
     //Ajouter l'élément devant(par défaut il est en arrière plan et on ne le voit pas.. logique hein !?)
